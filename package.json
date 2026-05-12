@@ -1,0 +1,12 @@
+{
+  "name": "wuxiangzhijing-personal-site",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "python3 -m http.server 5173",
+    "dev:portfolio": "python3 -m http.server 5173 --directory portfolio-site",
+    "dev:studio": "python3 -m http.server 5174 --directory studio-site",
+    "test": "node tests/site.test.mjs"
+  }
+}

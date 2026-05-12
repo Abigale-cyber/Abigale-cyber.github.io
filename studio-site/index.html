@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>无相智境 | AI 学习陪练 IP 工作室</title>
+    <meta name="description" content="无相智境是 AI 学习陪练 IP 工作室，提供课程培训、企业陪跑、AI 学习陪练产品和内容工作流共创。" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="无相智境 | AI 学习陪练 IP 工作室" />
+    <meta property="og:description" content="课程培训、企业陪跑、AI 学习陪练和内容工作流共创。" />
+    <meta property="og:image" content="./assets/project-ai-coach.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Kalam:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+    <script src="./script.js" type="module" defer></script>
+  </head>
+  <body data-site="studio">
+    <header class="site-header">
+      <nav class="nav-shell" aria-label="无相智境导航">
+        <a class="brand" href="./index.html" aria-label="返回入口">
+          <span class="brand-mark">无</span>
+          <span>
+            <strong>无相智境</strong>
+            <small>AI Studio</small>
+          </span>
+        </a>
+        <div class="nav-links">
+          <a href="#home">首页</a>
+          <a href="#projects">案例展示</a>
+          <a href="#cases">场景</a>
+          <a href="#content">内容</a>
+          <a href="#contact">联系</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero section">
+        <div class="hero-copy">
+          <div class="page-kicker"><span></span>AI 陪跑 / 课程培训 / 企业共创</div>
+          <h1>无相智境<br /><em>把 AI 能力带进课程、团队和业务现场</em></h1>
+          <p class="hero-subtitle">
+            面向课程团队、企业组织和想把 AI 真正用起来的业务团队，我们提供课程培训、企业陪跑、案例共创和内容工作流设计，让 AI 不只停留在演示层，而是进入真实使用场景。
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects"><i data-lucide="sparkles"></i>查看案例</a>
+            <a class="btn btn-secondary" href="#contact"><i data-lucide="message-circle"></i>微信沟通</a>
+          </div>
+          <div class="hero-metrics" aria-label="工作室概览">
+            <article>
+              <strong>3+</strong>
+              <span>企业家陪跑案例</span>
+            </article>
+            <article>
+              <strong>2类</strong>
+              <span>课程培训与企业陪跑</span>
+            </article>
+            <article>
+              <strong>5个</strong>
+              <span>微信、小红书、公众号、视频号与邮箱入口</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="section-heading">
+          <span class="page-kicker">Case Gallery</span>
+          <h2>案例展示</h2>
+          <p>这里集中展示无相智境已经沉淀和参与打造的项目案例，方便访客快速看到真实作品与交付方向。</p>
+        </div>
+        <div class="project-grid" id="projectGrid"></div>
+      </section>
+
+      <section id="cases" class="section about-layout">
+        <div class="section-heading">
+          <span class="page-kicker">Cases</span>
+          <h2>适合三类场景</h2>
+          <p>课程团队需要 AI 化训练体验，企业需要把 AI 用起来，个人学习者需要有人陪练和反馈。</p>
+        </div>
+        <div class="about-cards" id="caseGrid"></div>
+      </section>
+
+      <section id="content" class="section soft-band">
+        <div class="section-heading center">
+          <span class="page-kicker">Channels</span>
+          <h2>关注无相智境的内容更新</h2>
+          <p>内容渠道承接方法论、案例复盘、课程片段和 AI 工作流实践。</p>
+        </div>
+        <div class="channel-grid" id="channelGrid"></div>
+      </section>
+
+      <section id="contact" class="section contact-section">
+        <div class="contact-card app-card">
+          <div>
+            <span class="page-kicker">Contact</span>
+            <h2>想做课程培训，或企业 AI 陪跑？</h2>
+            <p>可以先看案例展示，也可以直接预约沟通。链接和二维码后续替换到配置里即可。</p>
+          </div>
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="#projects"><i data-lucide="briefcase-business"></i>查看案例</a>
+            <button class="btn btn-secondary" type="button" data-channel-button="微信咨询"><i data-lucide="message-circle"></i>预约沟通</button>
+            <a class="btn btn-ghost" href="#content"><i data-lucide="rss"></i>关注内容</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© 2026 无相智境. AI 学习陪练 IP 工作室。</span>
+      <a href="#home">回到顶部</a>
+    </footer>
+
+    <dialog id="channelDialog" class="channel-dialog">
+      <button class="dialog-close" type="button" aria-label="关闭弹窗"><i data-lucide="x"></i></button>
+      <div class="dialog-icon" id="dialogIcon"></div>
+      <h3 id="dialogTitle"></h3>
+      <p id="dialogDescription"></p>
+      <div class="qr-placeholder" id="dialogQr">二维码待替换</div>
+      <a class="btn btn-primary" id="dialogLink" href="#" target="_blank" rel="noreferrer">打开链接</a>
+    </dialog>
+  </body>
+</html>
