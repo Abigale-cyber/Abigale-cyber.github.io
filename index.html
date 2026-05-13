@@ -3,11 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Abigale & 无相智境 | 入口</title>
-    <meta name="description" content="选择进入 Abigale 个人作品集，或进入无相智境 AI 学习陪练 IP 工作室。" />
+    <title>Abigale | 个人作品集</title>
+    <meta name="description" content="Abigale 的个人作品集：AI 产品创造者、学习陪练实践者和内容工作流搭建者。" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Abigale & 无相智境" />
-    <meta property="og:description" content="个人作品集与无相智境 IP 工作室双站入口。" />
+    <meta property="og:title" content="Abigale | 个人作品集" />
+    <meta property="og:description" content="展示 Abigale 的 AI 产品、学习陪练、内容工作流与项目实践。" />
+    <meta property="og:image" content="./assets/project-content-system.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,31 +19,97 @@
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
     <script src="./script.js" type="module" defer></script>
   </head>
-  <body class="gateway-page">
-    <main class="gateway-shell">
-      <div class="page-kicker"><span></span>Choose a site</div>
-      <h1>两个入口，<br />两种叙事。</h1>
-      <p class="gateway-subtitle">
-        个人作品集负责展示 Abigale 做过什么、正在做什么；无相智境负责介绍 IP 工作室、课程培训和企业陪跑服务。
-      </p>
-
-      <div class="choice-grid">
-        <a class="choice-card app-card" href="./portfolio.html">
-          <span class="choice-icon"><i data-lucide="sparkles"></i></span>
-          <small>Personal Portfolio</small>
-          <strong>Abigale 个人作品集</strong>
-          <p>展示个人项目、产品实践、内容渠道和合作方式，更像一个“我是谁 + 我做过什么”的作品主页。</p>
-          <span class="choice-link">进入个人作品集 <i data-lucide="arrow-up-right"></i></span>
+  <body data-site="portfolio">
+    <header class="site-header">
+      <nav class="nav-shell" aria-label="个人作品集导航">
+        <a class="brand" href="./index.html" aria-label="返回首页">
+          <span class="brand-mark">A</span>
+          <span>
+            <strong>Abigale</strong>
+            <small>Portfolio</small>
+          </span>
         </a>
+        <div class="nav-links">
+          <a href="#home">首页</a>
+          <a href="#projects">作品</a>
+          <a href="#content">内容</a>
+          <a href="#contact">联系</a>
+        </div>
+      </nav>
+    </header>
 
-        <a class="choice-card app-card studio-choice" href="./studio.html">
-          <span class="choice-icon"><i data-lucide="orbit"></i></span>
-          <small>AI Coaching Studio</small>
-          <strong>无相智境 IP 工作室</strong>
-          <p>介绍 AI 学习陪练、课程培训、企业陪跑和项目共创服务，更像一个可转化的工作室官网。</p>
-          <span class="choice-link">进入无相智境 <i data-lucide="arrow-up-right"></i></span>
-        </a>
-      </div>
+    <main>
+      <section id="home" class="hero section">
+        <div class="hero-copy">
+          <div class="page-kicker"><span></span>个人作品集</div>
+          <h1>把想法，<br /><em>做成可用作品。</em></h1>
+          <p class="hero-subtitle">
+            我是 Abigale，一个 AI 产品创造者。这里收纳我做过的产品、内容系统和学习陪练实验，也放未来可以继续扩展的项目入口。
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects"><i data-lucide="layout-grid"></i>查看作品</a>
+            <a class="btn btn-secondary" href="#contact"><i data-lucide="message-circle"></i>联系我</a>
+            <a class="btn btn-ghost" href="#content"><i data-lucide="rss"></i>关注内容</a>
+          </div>
+        </div>
+        <aside class="hero-panel app-card">
+          <div class="portrait-card">
+            <img src="./assets/project-content-system.jpg" alt="Abigale 个人作品集封面" />
+          </div>
+          <div class="hero-stats">
+            <div><strong>3+</strong><span>作品入口</span></div>
+            <div><strong>AI</strong><span>产品方向</span></div>
+            <div><strong>内容</strong><span>长期沉淀</span></div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="section-heading">
+          <span class="page-kicker">Work Gallery</span>
+          <h2>作品橱窗</h2>
+          <p>这里偏“个人履历和作品展示”：每张卡片是一件项目作品，未来可以继续追加截图、案例链接和复盘文章。</p>
+        </div>
+        <div class="project-grid" id="projectGrid"></div>
+      </section>
+
+      <section id="content" class="section soft-band">
+        <div class="section-heading center">
+          <span class="page-kicker">Content</span>
+          <h2>内容和公开记录</h2>
+          <p>用微信咨询、公众号和邮箱承接作品咨询、长文沉淀和正式合作。</p>
+        </div>
+        <div class="channel-grid" id="channelGrid"></div>
+      </section>
+
+      <section id="contact" class="section contact-section">
+        <div class="contact-card app-card">
+          <div>
+            <span class="page-kicker">Contact</span>
+            <h2>想了解作品，或一起做点东西？</h2>
+            <p>可以从作品入口开始，也可以直接通过微信、邮箱或内容平台联系我。</p>
+          </div>
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="#projects"><i data-lucide="sparkles"></i>查看作品</a>
+            <button class="btn btn-secondary" type="button" data-channel-button="微信咨询"><i data-lucide="message-circle"></i>加微信咨询</button>
+            <a class="btn btn-ghost" href="#content"><i data-lucide="rss"></i>关注内容</a>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <footer class="site-footer">
+      <span>© 2026 Abigale. 个人作品集。</span>
+      <a href="#home">回到顶部</a>
+    </footer>
+
+    <dialog id="channelDialog" class="channel-dialog">
+      <button class="dialog-close" type="button" aria-label="关闭弹窗"><i data-lucide="x"></i></button>
+      <div class="dialog-icon" id="dialogIcon"></div>
+      <h3 id="dialogTitle"></h3>
+      <p id="dialogDescription"></p>
+      <div class="qr-placeholder" id="dialogQr">二维码待替换</div>
+      <a class="btn btn-primary" id="dialogLink" href="#" target="_blank" rel="noreferrer">打开链接</a>
+    </dialog>
   </body>
 </html>

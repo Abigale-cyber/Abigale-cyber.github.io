@@ -4,6 +4,7 @@ import { readFileSync } from 'node:fs';
 const portfolio = readFileSync('portfolio-site/index.html', 'utf8');
 const portfolioCss = readFileSync('portfolio-site/styles.css', 'utf8');
 const portfolioJs = readFileSync('portfolio-site/script.js', 'utf8');
+const rootIndex = readFileSync('index.html', 'utf8');
 const studio = readFileSync('studio-site/index.html', 'utf8');
 const studioCss = readFileSync('studio-site/styles.css', 'utf8');
 const studioJs = readFileSync('studio-site/script.js', 'utf8');
@@ -25,6 +26,10 @@ assert.match(portfolio, /AI 产品创造者/, 'portfolio must position the perso
 assert.match(portfolio, /作品橱窗/, 'portfolio must include a work gallery');
 assert.doesNotMatch(portfolio, /href="[^"]*studio/i, 'portfolio site must not link to studio site');
 assert.doesNotMatch(portfolio, /无相智境/, 'portfolio site must not include studio branding');
+
+assert.match(rootIndex, /<body data-site="portfolio">/, 'GitHub Pages root must deploy the portfolio site directly');
+assert.match(rootIndex, /Abigale \| 个人作品集/, 'GitHub Pages root must use the portfolio page title');
+assert.doesNotMatch(rootIndex, /Choose a site|两个入口|无相智境/, 'GitHub Pages root must not deploy the gateway page');
 
 for (const label of ['首页', '案例展示', '场景', '内容', '联系']) {
   assert.match(studio, new RegExp(`>${label}<`), `studio missing nav label ${label}`);
