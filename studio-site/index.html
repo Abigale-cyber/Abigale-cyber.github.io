@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Kalam:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Kalam:wght@400;700&family=Ma+Shan+Zheng&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
@@ -43,13 +43,16 @@
       <section id="home" class="hero section">
         <div class="hero-copy">
           <div class="page-kicker"><span></span>AI 陪跑 / 课程培训 / 企业共创</div>
-          <h1>无相智境<br /><em>把 AI 能力带进课程、团队和业务现场</em></h1>
+          <h1>
+            <span class="hero-line hero-line-ink">把 AI 能力带进课程、</span>
+            <em class="hero-line hero-line-accent">团队和业务现场</em>
+          </h1>
           <p class="hero-subtitle">
-            面向课程团队、企业组织和想把 AI 真正用起来的业务团队，我们提供课程培训、企业陪跑、案例共创和内容工作流设计，让 AI 不只停留在演示层，而是进入真实使用场景。
+            面向课程团队与企业组织，我们把课程培训、企业陪跑和案例共创，做成真正能落地的 AI 使用场景。
           </p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#projects"><i data-lucide="sparkles"></i>查看案例</a>
-            <a class="btn btn-secondary" href="#contact"><i data-lucide="message-circle"></i>微信沟通</a>
+            <button class="btn btn-secondary" type="button" data-channel-button="微信咨询"><i data-lucide="message-circle"></i>微信沟通</button>
           </div>
           <div class="hero-metrics" aria-label="工作室概览">
             <article>
@@ -77,11 +80,11 @@
         <div class="project-grid" id="projectGrid"></div>
       </section>
 
-      <section id="cases" class="section about-layout">
+      <section id="cases" class="section programs-section">
         <div class="section-heading">
-          <span class="page-kicker">Cases</span>
-          <h2>适合三类场景</h2>
-          <p>课程团队需要 AI 化训练体验，企业需要把 AI 用起来，个人学习者需要有人陪练和反馈。</p>
+          <span class="page-kicker">Programs</span>
+          <h2>课程与服务</h2>
+          <p>无相智境当前聚焦两套课程、一套陪跑服务，再加一个社群入口，帮助用户先上手、再提效、再持续共学。</p>
         </div>
         <div class="about-cards" id="caseGrid"></div>
       </section>

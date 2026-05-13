@@ -26,9 +26,26 @@ const studioServices = [
 ];
 
 const studioCases = [
-  { icon: 'graduation-cap', title: '课程团队', description: '把原有课程升级成可练习、可反馈、可复盘的 AI 陪练型学习体验。' },
-  { icon: 'briefcase-business', title: '企业组织', description: '围绕业务岗位设计 AI 工作流，让团队从“知道工具”走到“真的用起来”。' },
-  { icon: 'user-round-check', title: '个人学习者', description: '用陪练、模拟面试和阶段复盘帮助学习者更稳定地建立能力。' },
+  {
+    icon: 'code',
+    title: 'Vibe Coding 课程',
+    description: '面向想快速进入 AI 编程工作流的人群，用真实项目练习把灵感变成可运行的产品原型。',
+  },
+  {
+    icon: 'briefcase-business',
+    title: 'AI + OPC 提效课程',
+    description: '围绕办公流程、内容处理和日常协作场景，教会团队把 AI 真正接进工作方法里。',
+  },
+  {
+    icon: 'megaphone',
+    title: 'AI + 自媒体陪跑',
+    description: '从定位、选题、内容生产到发布节奏，提供陪跑式共创，帮助个人或团队把 AI 和自媒体一起跑起来。',
+  },
+  {
+    icon: 'users',
+    title: '共学社群与资料领取',
+    description: '可以先加入社群，领取入门资料、课程信息和实践清单，再决定是否进入课程或服务。',
+  },
 ];
 
 const channels = [
@@ -103,11 +120,11 @@ function openChannelDialog(channelName) {
   document.querySelector('#dialogTitle').textContent = channel.name;
   document.querySelector('#dialogDescription').textContent = channel.description;
   const qr = document.querySelector('#dialogQr');
-  qr.textContent = channel.qrImage ? '' : '二维码待替换';
+  qr.textContent = channel.qrImage ? '' : channel.name === '微信咨询' ? '请替换为微信二维码' : '二维码待替换';
   qr.style.backgroundImage = channel.qrImage ? `url("${channel.qrImage}")` : '';
   const link = document.querySelector('#dialogLink');
   link.href = channel.href;
-  link.textContent = channel.href.startsWith('#') ? '联系我获取' : '打开链接';
+  link.textContent = channel.href.startsWith('#') ? (channel.name === '微信咨询' ? '线下补充二维码' : '联系我获取') : '打开链接';
   dialog.showModal();
   window.lucide?.createIcons();
 }
