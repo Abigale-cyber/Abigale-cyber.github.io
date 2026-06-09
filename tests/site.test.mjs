@@ -69,8 +69,10 @@ assert.match(
   /const studioServices = \[\s*\{\s*title: 'AI 学习陪练展示案例'[\s\S]*?coverImage: '\.\/assets\/project-examiners-home\.png'[\s\S]*?href: 'https:\/\/81\.70\.39\.125:8443\/'/,
   'studio first case must use the project homepage cover and homepage link',
 );
-assert.match(portfolioJs, /const channels = \[\s*\{\s*name: '微信咨询'/, 'portfolio channel order must put WeChat first');
-assert.match(portfolioJs, /description: '如有需要，请联系我。'/, 'WeChat dialog copy must stay concise');
+assert.match(portfolioJs, /const channels = \[\s*\{\s*name: '联系我'/, 'portfolio contact channel should stay concise');
+assert.match(portfolioJs, /description: '如有需要，请联系我。'/, 'portfolio dialog copy must stay concise');
+assert.doesNotMatch(portfolio, /微信咨询/, 'portfolio must not show WeChat consultation copy');
+assert.doesNotMatch(portfolioJs, /微信咨询|dialogTitle/, 'portfolio dialog must not show a WeChat consultation title');
 assert.match(portfolioJs, /\? '联系我' : '打开链接'/, 'dialog hash action should use concise contact copy');
 assert.match(studioJs, /const channels = \[\s*\{\s*name: '微信咨询'/, 'studio channel order must put WeChat first');
 assert.doesNotMatch(portfolioJs, /name: '小红书'/, 'portfolio channels should not include Xiaohongshu');

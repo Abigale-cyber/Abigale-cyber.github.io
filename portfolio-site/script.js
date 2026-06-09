@@ -52,7 +52,7 @@ const tools = [
 const TOOLS_SHOW_COUNT = 3;
 
 const channels = [
-  { name: '微信咨询', icon: 'message-circle', href: '#contact', qrImage: './assets/wechat-qr.png', description: '如有需要，请联系我。' },
+  { name: '联系我', icon: 'message-circle', href: '#contact', qrImage: './assets/wechat-qr.png', description: '如有需要，请联系我。' },
   { name: '微信公众号', icon: 'newspaper', href: '#contact', qrImage: '', description: '沉淀长文、项目复盘和系统化方法论。' },
   { name: '邮箱', icon: 'mail', href: 'mailto:hello@example.com', qrImage: '', description: '可以通过邮箱联系我。' },
 ];
@@ -125,7 +125,6 @@ function openChannelDialog(channelName) {
   if (!channel || !dialog) return;
 
   document.querySelector('#dialogIcon').innerHTML = iconMarkup(channel.icon);
-  document.querySelector('#dialogTitle').textContent = channel.name;
   document.querySelector('#dialogDescription').textContent = channel.description;
   const qr = document.querySelector('#dialogQr');
   qr.textContent = channel.qrImage ? '' : '二维码待替换';
