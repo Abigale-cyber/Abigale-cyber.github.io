@@ -30,7 +30,8 @@ assert.match(portfolio, /个人作品集/, 'portfolio must center the personal p
 assert.match(portfolio, /AI 产品创造者/, 'portfolio must position the person separately from the studio');
 assert.match(portfolio, /AI Product Portfolio/, 'portfolio must include the product portfolio hero');
 assert.match(portfolio, /AI Tools/, 'portfolio must include the AI tools section');
-assert.match(portfolio, /如有需要，请联系我。/, 'portfolio contact section must stay concise');
+assert.match(portfolio, /The best way to predict the future<br \/>is to invent it\./, 'portfolio quote must use the Alan Kay line');
+assert.match(portfolio, /&mdash; Alan Kay/, 'portfolio quote must include attribution');
 assert.doesNotMatch(portfolio, /href="[^"]*(studio-site|studio\.html)/i, 'portfolio site must not link to studio site');
 assert.doesNotMatch(portfolio, /无相智境/, 'portfolio site must not include studio branding');
 assert.doesNotMatch(portfolio, /Open To Collaboration|一起把 AI 想法做成产品|项目合作|微信沟通/, 'portfolio contact copy must not imply side work');
