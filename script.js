@@ -25,10 +25,36 @@ const portfolioProjects = [
   },
 ];
 
+const tools = [
+  {
+    title: 'WeChat Studio',
+    emoji: '💬',
+    tag: 'Web App',
+    description: '微信公众号自主排版工具，用 AI 辅助生成精美的公众号图文排版，告别手动调样式。',
+    href: 'https://81.70.39.125:8443/wechat-studio/',
+  },
+  {
+    title: 'Prompt Manager',
+    emoji: '🧩',
+    tag: 'Mac App · GitHub',
+    description: '本地 Prompt 工作台，将常用提示词分类保存、模板化填写，并可在当前应用中快速唤出调用。',
+    href: 'https://github.com/Abigale-cyber/Prompt_Manager',
+  },
+  {
+    title: 'AI Desktop Planner',
+    emoji: '🗓️',
+    tag: 'Mac App · GitHub',
+    description: '桌面端 AI 日程规划工具，用自然语言整理日程与提醒，并将确认后的安排写入系统日历。',
+    href: 'https://github.com/Abigale-cyber/AIDesktopPlanner',
+  },
+];
+
+const TOOLS_SHOW_COUNT = 3;
+
 const channels = [
-  { name: '微信咨询', icon: 'message-circle', href: '#contact', qrImage: '', description: '适合项目合作、作品咨询和学习陪练沟通。' },
+  { name: '微信咨询', icon: 'message-circle', href: '#contact', qrImage: './assets/wechat-qr.png', description: '如有需要，请联系我。' },
   { name: '微信公众号', icon: 'newspaper', href: '#contact', qrImage: '', description: '沉淀长文、项目复盘和系统化方法论。' },
-  { name: '邮箱', icon: 'mail', href: 'mailto:hello@example.com', qrImage: '', description: '用于正式合作、媒体邀约和项目联络。' },
+  { name: '邮箱', icon: 'mail', href: 'mailto:hello@example.com', qrImage: '', description: '可以通过邮箱联系我。' },
 ];
 
 function iconMarkup(name) {
@@ -60,6 +86,26 @@ function renderProjects() {
   }).join('');
 }
 
+function renderTools() {
+  const list = document.querySelector('#toolsList');
+  if (!list) return;
+
+  const visibleTools = tools.slice(0, TOOLS_SHOW_COUNT);
+  list.innerHTML = visibleTools.map((tool) => `
+    <a class="tool-card app-card" href="${tool.href}" target="_blank" rel="noreferrer">
+      <span class="tool-card-emoji">${tool.emoji}</span>
+      <div class="tool-card-body">
+        <div class="tool-card-header">
+          <strong>${tool.title}</strong>
+          <span class="tool-card-tag">${tool.tag}</span>
+        </div>
+        <p>${tool.description}</p>
+      </div>
+      <span class="tool-card-arrow">${iconMarkup('arrow-right')}</span>
+    </a>
+  `).join('');
+}
+
 function renderChannels() {
   const grid = document.querySelector('#channelGrid');
   if (!grid) return;
@@ -86,7 +132,7 @@ function openChannelDialog(channelName) {
   qr.style.backgroundImage = channel.qrImage ? `url("${channel.qrImage}")` : '';
   const link = document.querySelector('#dialogLink');
   link.href = channel.href;
-  link.textContent = channel.href.startsWith('#') ? '联系我获取' : '打开链接';
+  link.textContent = channel.href.startsWith('#') ? '联系我' : '打开链接';
   dialog.showModal();
   window.lucide?.createIcons();
 }
@@ -102,6 +148,7 @@ function bindInteractions() {
 }
 
 renderProjects();
+renderTools();
 renderChannels();
 bindInteractions();
 window.addEventListener('load', () => window.lucide?.createIcons());
