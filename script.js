@@ -4,7 +4,7 @@ const projects = [
     step: '01',
     focus: '企业级落地',
     name: '企业级员工智能客服',
-    meta: ['LLM · RAG · Multi-Agent', '万达 4万+员工', '产品 Owner'],
+    meta: ['LLM · RAG · Multi-Agent', 'XX 4万+员工', '产品 Owner'],
     summary: [
       ['业务问题', '运营、物业、招商、HR 制度分散，4 万余名员工缺少统一查询入口。'],
       ['落地方案', '用 LLM、RAG 与 Multi-Agent 构建企业智能客服，并通过 Bad Case 闭环持续优化。'],
@@ -21,7 +21,7 @@ const projects = [
     step: '02',
     focus: '增长场景复制',
     name: 'AI 智能销售助手',
-    meta: ['LLM · RAG', '考研招生', '独立 AI 产品负责人'],
+    meta: ['LLM · RAG · Agent', '考研招生', '独立 AI 产品负责人'],
     summary: [
       ['业务问题', '招生高度依赖销冠，新人培养周期长，销售话术与跟进方法难以复制。'],
       ['落地方案', '把销冠打法沉淀成 AI 销售助手与陪练，辅助普通销售完成判断、跟进和复盘。'],
@@ -31,7 +31,7 @@ const projects = [
       ['+85%', '招生转化率'],
       ['-60%', '客户流失率'],
     ],
-    demo: 'https://81.70.39.125:8443/ai-sales-coach-orange/learner/growth',
+    demo: 'https://81.70.39.125:8443/ai-sales-coach-orange/',
   },
   {
     year: '2026',
@@ -48,7 +48,7 @@ const projects = [
       ['+73%', '学生好评率'],
       ['4000+', '冲刺期日活'],
     ],
-    demo: 'https://81.70.39.125:8443/educational-ai/teacher/login',
+    demo: 'https://81.70.39.125:8443/educational-ai/',
   },
 ];
 
